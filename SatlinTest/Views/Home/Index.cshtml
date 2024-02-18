@@ -1,0 +1,84 @@
+﻿@model IEnumerable<SatlinTest.Models.User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <a asp-controller="Home" asp-action="SearchUsers" 
+       class="btn btn-success">
+        Download Users
+    </a>
+</div>
+<div class="mx-auto p-5">
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Username
+                </th>
+                <th>
+                   Contact
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Geo
+                </th>
+                <th>
+                    Company
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <form asp-action="Index" method="post">
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            <input type="text" placeholder="@Html.DisplayFor(modelItem => item.username)" value="@item.username" name="username"/>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.email) | 
+                            @Html.DisplayFor(modelItem => item.phone) |                           
+                            @Html.DisplayFor(modelItem => item.website)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.address.street), 
+                            @Html.DisplayFor(modelItem => item.address.suite), 
+                            @Html.DisplayFor(modelItem => item.address.city) 
+                            @Html.DisplayFor(modelItem => item.address.zipcode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.address.geo.lat) - 
+                            @Html.DisplayFor(modelItem => item.address.geo.lng)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.company.name) |                         
+                            @Html.DisplayFor(modelItem => item.company.bs) |                          
+                            @Html.DisplayFor(modelItem => item.company.catchPhrase)
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="submit" value="Update" class="btn btn-warning" asp-route-id="@item.id"/>
+                            </div>
+                        </td>
+                        <td>
+                            <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.id"
+                                class="btn btn-danger">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                </form>
+            }
+        </tbody>
+    </table>
+</div>

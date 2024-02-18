@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatlinTest", "SatlinTest\SatlinTest.csproj", "{4800D6B2-267B-4ED5-8C24-27D4A2372536}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatlinFunctions", "SatlinFunctions\SatlinFunctions.csproj", "{85954EBE-AE2D-42E6-9BB2-DC4992D6154F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4800D6B2-267B-4ED5-8C24-27D4A2372536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4800D6B2-267B-4ED5-8C24-27D4A2372536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4800D6B2-267B-4ED5-8C24-27D4A2372536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4800D6B2-267B-4ED5-8C24-27D4A2372536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85954EBE-AE2D-42E6-9BB2-DC4992D6154F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85954EBE-AE2D-42E6-9BB2-DC4992D6154F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85954EBE-AE2D-42E6-9BB2-DC4992D6154F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85954EBE-AE2D-42E6-9BB2-DC4992D6154F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD68474-5C2B-455C-B834-793C1CCB5176}
+	EndGlobalSection
+EndGlobal
